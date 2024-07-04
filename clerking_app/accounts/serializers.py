@@ -8,7 +8,8 @@ from django.conf import settings
 class UserSerializer(ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password', 'first_name', 'last_name', 'email', 'is_active', 'is_staff', 'roles']
+        fields = ['id', 'username', 'password', 'first_name', 'last_name', 'email', 'is_active', 'is_staff', 'role']
+        extra_kwargs = {'password': {'write_only': True}}
 
 
 # creating the serializer for the user profile model
