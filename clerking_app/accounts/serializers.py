@@ -1,7 +1,7 @@
 # importin the required libraries, models and serializers
 from datetime import datetime
 from rest_framework.serializers import ModelSerializer
-from .models import User_Profile, User, School  
+from .models import User_Profile, User
 from django.conf import settings
 
 # creatiing the serializer for th user model 
@@ -16,11 +16,4 @@ class UserSerializer(ModelSerializer):
 class User_Profile_Serializer(ModelSerializer):
     class Meta:
         model = User_Profile
-        fields = '__all__'
-
-
-# creating the serializer for the school model 
-class School_Serializer(ModelSerializer):
-    class Meta:
-        model = School
         fields = '__all__'

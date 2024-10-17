@@ -9,11 +9,6 @@ class User(AbstractUser):
     def __str__(self):
         return self.username
 
-class School(models.Model):
-    name = models.CharField(max_length=255)
-
-    def __str__(self):
-        return self.name
 
 class User_Profile(models.Model):
     Gender_selection = (
@@ -23,8 +18,8 @@ class User_Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
-    gender = models.CharField(max_length=10, choices=Gender_selection)
+    school = models.CharField(max_length=255, null=True, blank=True)
+    gender = models.CharField(max_length=10, choices=Gender_selection, null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
