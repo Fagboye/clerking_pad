@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
 
 
 # table for clerking
@@ -31,10 +32,9 @@ class Clerking(models.Model):
         ('im', 'Internal Medicine'),
         ('surgery', 'Surgery')
     ]
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     # Patient's biodata
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     age = models.IntegerField()
     gender = models.CharField(max_length=10, choices=gender_choices)

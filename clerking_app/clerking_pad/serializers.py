@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Patient_Biodata, Clerking
+from .models import Clerking
 
 
 # serializer for clerking
@@ -19,7 +19,6 @@ class IM_ClerkingSerializer(serializers.ModelSerializer):
 class Surgery_ClerkingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Clerking
-        fields = '__all__'
         exclude = ['past_medical_history']
 
 
