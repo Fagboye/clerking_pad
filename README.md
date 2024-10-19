@@ -24,7 +24,8 @@ This project serves as the backend for a mobile medical clerking application des
 
 - **Backend Framework**: Django with Django Rest Framework
 - **Authentication**: JWT (JSON Web Tokens)
-- **Database**: (PostgreSQL)
+- **Database**: PostgreSQL
+- **API Documentation**: Swagger
 
 ## Getting Started
 
@@ -32,7 +33,13 @@ This project serves as the backend for a mobile medical clerking application des
 
 ## API Documentation
 
-(Provide an overview or link to detailed API documentation)
+Our API is documented using Swagger. To access the API documentation:
+
+1. Run the server locally
+2. Navigate to `/swagger/` endpoint in your browser
+3. You'll see a comprehensive, interactive documentation of all available endpoints
+
+This documentation allows you to explore and test the API directly from your browser.
 
 ## Contributing
 
